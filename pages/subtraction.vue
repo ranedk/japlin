@@ -4,7 +4,9 @@
       <AppNavbar />
     </div>
 
-    <h1 class="text-3xl font-bold mb-8 text-indigo-700">Subtraction</h1>
+    <h1 class="text-3xl font-bold mb-8 text-indigo-700 dark:text-indigo-400">
+      Subtraction
+    </h1>
 
     <Subtraction />
   </div>

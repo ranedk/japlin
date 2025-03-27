@@ -17,5 +17,11 @@ export default defineNuxtConfig({
     plugins: [tailwindcss()],
   },
   css: ["~/assets/css/main.css"],
-  modules: ["@pinia/nuxt", "@nuxt/ui"],
+  modules: [
+    [
+      '@pinia/nuxt',
+      { autoImports: ['defineStore', 'acceptHMRUpdate', 'storeToRefs'] },
+    ],
+    ["@nuxt/ui", {}],
+  ]
 });

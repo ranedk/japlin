@@ -1,16 +1,18 @@
 <template>
-  <div class="bg-white rounded-lg shadow-lg p-6">
+  <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6">
     <Scoring />
 
     <div class="mb-8">
-      <h2 class="text-xl font-semibold text-indigo-700 mb-4">
+      <h2
+        class="text-xl font-semibold text-indigo-700 dark:text-indigo-400 mb-4"
+      >
         Addition Problem
       </h2>
 
       <div class="flex justify-center">
-        <div class="font-mono text-right text-xl md:text-2xl">
+        <div class="font-mono text-right text-xl md:text-2xl dark:text-white">
           <div class="mb-2">{{ formatNumber(firstNumber) }}</div>
-          <div class="border-b-2 border-gray-400 pb-2">
+          <div class="border-b-2 border-gray-400 dark:border-gray-600 pb-2">
             + {{ formatNumber(secondNumber) }}
           </div>
 
@@ -28,7 +30,7 @@
                 ref="answerInput"
                 v-model="userAnswer"
                 type="text"
-                class="rtl font-mono text-right text-xl md:text-2xl p-2 border rounded w-32 md:w-40"
+                class="rtl font-mono text-right text-xl md:text-2xl p-2 border rounded w-32 md:w-40 dark:bg-gray-700 dark:text-white dark:border-gray-600"
                 :class="{
                   'border-red-500': showWrong,
                   'border-green-500': showSuccess,

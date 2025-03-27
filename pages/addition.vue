@@ -4,7 +4,9 @@
       <AppNavbar />
     </div>
 
-    <h1 class="text-3xl font-bold mb-8 text-indigo-700">Addition</h1>
+    <h1 class="text-3xl font-bold mb-8 text-indigo-700 dark:text-indigo-400">
+      Addition
+    </h1>
 
     <Addition />
   </div>

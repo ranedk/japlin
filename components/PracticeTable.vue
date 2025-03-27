@@ -1,16 +1,21 @@
 <template>
-  <div class="bg-white rounded-lg shadow-lg p-6">
+  <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6">
     <Scoring />
 
     <div class="mb-8">
-      <h2 class="text-xl font-semibold text-indigo-700 mb-4">
+      <h2
+        class="text-xl font-semibold text-indigo-700 dark:text-indigo-400 mb-4"
+      >
         Multiplication Tables Practice
       </h2>
 
       <div class="mb-6">
-        <h3 class="font-medium mb-2">Select tables to practice:</h3>
-        <div class="flex flex-wrap gap-2">
+        <h3 class="font-medium mb-2 dark:text-white">
+          Select tables to practice:
+        </h3>
+        <div class="flex flex-wrap gap-4">
           <UCheckbox
+            size="xl"
             v-for="num in 11"
             :key="num + 2"
             :model-value="tableSelections[num + 2]"
@@ -24,7 +29,7 @@
       </div>
 
       <div v-if="hasSelectedTables" class="flex justify-center">
-        <div class="font-mono text-center text-xl md:text-2xl">
+        <div class="font-mono text-center text-xl md:text-2xl dark:text-white">
           <div class="mb-6 flex items-center justify-center">
             <span class="text-3xl">{{ firstNumber }}</span>
             <span class="mx-4">×</span>
@@ -45,7 +50,7 @@
                 ref="answerInput"
                 v-model="userAnswer"
                 type="text"
-                class="font-mono text-center text-xl md:text-2xl p-2 border rounded w-32 md:w-40"
+                class="font-mono text-center text-xl md:text-2xl p-2 border rounded w-32 md:w-40 dark:bg-gray-700 dark:text-white dark:border-gray-600"
                 :class="{
                   'border-red-500': showWrong,
                   'border-green-500': showSuccess,

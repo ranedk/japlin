@@ -1,11 +1,8 @@
 <template>
-  <nav class="bg-indigo-700 text-white shadow-md">
+  <nav class="bg-indigo-700 dark:bg-indigo-900 text-white shadow-md">
     <div class="container mx-auto px-4">
       <div class="flex justify-between items-center py-4">
-        <NuxtLink
-          to="/"
-          class="text-white hover:underline flex items-center"
-        >
+        <NuxtLink to="/" class="text-white hover:underline flex items-center">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             class="h-5 w-5 mr-1"
@@ -20,6 +17,7 @@
           </svg>
           Back to Table of Contents
         </NuxtLink>
+        <ThemeToggle />
       </div>
     </div>
   </nav>
